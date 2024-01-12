@@ -10,4 +10,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          distribution: 'temurim'
+          java-version: '11'
+      - name: Build project
+        run: mvn clean install -DskipTests
+
 
